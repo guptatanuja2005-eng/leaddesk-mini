@@ -15,7 +15,12 @@ const app = express();
 // =======================
 // Middleware
 // =======================
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://leaddesk-mini-rust.vercel.app",
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 
